@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Créer un compte</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+</head>
+<body style="background-color:#ffe6f0; font-family:sans-serif;">
+
+  <div style="max-width:400px; margin:auto; background-color:#ffb6c1; padding:20px; border-radius:12px;">
+    <h2 style="text-align:center;">Créer un compte 📝</h2>
+    <a href="index.html" style="display:block;text-align:center;margin-bottom:10px;color:purple;text-decoration:underline;">Retour</a>
+
+    <!-- Form -->
+    <form id="signup-form" action="https://formsubmit.co/saintjulienjenny32@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Nom complet" required style="width:100%;padding:10px;margin:8px 0;border-radius:8px;border:none;"/>
+      <input type="email" name="email" placeholder="Adresse e-mail" required style="width:100%;padding:10px;margin:8px 0;border-radius:8px;border:none;"/>
+      <input type="password" name="password" placeholder="Mot de passe" required style="width:100%;padding:10px;margin:8px 0;border-radius:8px;border:none;"/>
+      
+      <!-- Hidden field to prevent bot -->
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit" style="width:100%;padding:12px;background-color:#ff69b4;color:white;border:none;border-radius:25px;font-size:16px;">
+        Créer mon compte
+      </button>
+    </form>
+
+    <p style="text-align:center;margin-top:20px;">© 2025 Amou Myste</p>
+  </div>
+
+  <script>
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyD-oXxxMZNgHLTtZopIbNAYtH8vhKbhvRc",
+      authDomain: "amou-myste.firebaseapp.com",
+      databaseURL: "https://amou-myste-default-rtdb.firebaseio.com",
+      projectId: "amou-myste",
+      storageBucket: "amou-myste.appspot.com",
+      messagingSenderId: "1033702463966",
+      appId: "1:1033702463966:web:2e34245694742b23d38b0a"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // Listen form submission
+    const form = document.getElementById("signup-form");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = form.name.value;
+      const email = form.email.value;
+      const password = form.password.value;
+
+      // Save to Firebase
+      db.ref("users").push({
+        name: name,
+        email: email,
+        password: password
+      }).then(() => {
+        // After saving, submit form to send email
+        form.submit();
+      });
+    });
+  </script>
+</body>
+</html>
