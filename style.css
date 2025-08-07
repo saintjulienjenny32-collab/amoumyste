@@ -1,20 +1,11 @@
-/* style.css */
+.logo-container {
+  text-align: center;
+  margin-top: 30px;
+}
 
-body { margin: 0; padding: 0; font-family: 'Arial', sans-serif; background: linear-gradient(to bottom, #ffe6f0, #fff0f5); color: #4d004d; text-align: center; }
-
-header { background-color: #ffb6c1; padding: 2rem 1rem; border-bottom: 2px dashed #ff69b4; }
-
-header h1 span { color: #d63384; font-style: italic; }
-
-.intro { padding: 3rem 1rem; background-image: url('https://i.imgur.com/NqG7M7T.png'); background-repeat: no-repeat; background-position: center top; background-size: contain; }
-
-.buttons { margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-
-button { padding: 0.75rem 1.5rem; background-color: #ff69b4; color: white; border: none; border-radius: 25px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer; transition: background 0.3s ease; }
-
-button:hover { background-color: #ff1493; }
-
-footer { background-color: #fff0f5; padding: 1rem; font-size: 0.9rem; color: #a64d79; border-top: 1px solid #ffc0cb; }
-
-@media (max-width: 600px) { .buttons { flex-direction: column; gap: 0.75rem; } }
-
+.logo-img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
