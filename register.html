@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Créer un compte | Amou Myste</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Inscription - Amou Myste</title>
 </head>
 <body>
-  <header>
-    <h1>Créer un compte 📝</h1>
-    <a href="index.html">Retour</a>
-  </header>
-
-  <main class="form-box">
-    <input type="text" placeholder="Nom complet" required />
-    <input type="email" placeholder="Email" required />
-    <input type="password" placeholder="Mot de passe" required />
-    <button>Créer mon compte</button>
-  </main>
-
-  <footer>
-    <p>© 2025 Amou Myste</p>
-  </footer>
+  <h2>Formulaire d'inscription</h2>
+  <form action="https://sheetdb.io/api/v1/YOUR_API_KEY" method="post">
+    <input name="data[Nom]" placeholder="Nom" required><br>
+    <input name="data[Email]" type="email" placeholder="Email" required><br>
+    <input name="data[Mot de passe]" type="password" placeholder="Mot de passe" required><br>
+    <button type="submit">Je m’inscris</button>
+  </form>
 </body>
 </html>
