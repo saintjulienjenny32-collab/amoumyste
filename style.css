@@ -1,52 +1,20 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
-  background-image: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/pink-2692124_1280.png');
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: 150px;
-  color: #5c005c;
-  text-align: center;
-  padding: 40px;
-}
+/* style.css */
 
-h1 {
-  color: #d63384;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
+body { margin: 0; padding: 0; font-family: 'Arial', sans-serif; background: linear-gradient(to bottom, #ffe6f0, #fff0f5); color: #4d004d; text-align: center; }
 
-.logo {
-  width: 120px;
-  margin-bottom: 20px;
-}
+header { background-color: #ffb6c1; padding: 2rem 1rem; border-bottom: 2px dashed #ff69b4; }
 
-form {
-  background: #ffffffcc;
-  padding: 20px;
-  margin: 30px auto;
-  border-radius: 15px;
-  max-width: 400px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+header h1 span { color: #d63384; font-style: italic; }
 
-input, button {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
+.intro { padding: 3rem 1rem; background-image: url('https://i.imgur.com/NqG7M7T.png'); background-repeat: no-repeat; background-position: center top; background-size: contain; }
 
-button {
-  background-color: #ff69b4;
-  color: white;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
+.buttons { margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
-button:hover {
-  background-color: #d63384;
-}
+button { padding: 0.75rem 1.5rem; background-color: #ff69b4; color: white; border: none; border-radius: 25px; font-size: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer; transition: background 0.3s ease; }
+
+button:hover { background-color: #ff1493; }
+
+footer { background-color: #fff0f5; padding: 1rem; font-size: 0.9rem; color: #a64d79; border-top: 1px solid #ffc0cb; }
+
+@media (max-width: 600px) { .buttons { flex-direction: column; gap: 0.75rem; } }
+
