@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6f0;
+    color: #660033;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logo-img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
