@@ -1,21 +1,9 @@
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bienvenue sur Amou Myste</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>Bienvenue sur <span class="highlight">Amou Myste</span></h1>
-    <p>Faites des rencontres sincères et magiques ✨</p>
-    <div class="buttons">
-      <a href="inscription.html" class="btn">Je m’inscris</a>
-      <a href="login.html" class="btn">Me connecter</a>
-      <a href="apropos.html" class="btn">En savoir plus</a>
-    </div>
-  </div>
-</body>
-</html>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff69b4">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(() => console.log("✅ Service Worker Registered"))
+      .catch(err => console.log("❌ Service Worker Failed", err));
+  }
+</script>
