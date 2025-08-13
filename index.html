@@ -1,28 +1,38 @@
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#ff69b4">
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(() => console.log("✅ Service Worker Registered"))
-      .catch(err => console.log("❌ Service Worker Failed", err));
-  }
-</script>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Accueil Amou-myste</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil - Amou Myste</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f8f8f8;
+      padding: 50px;
+    }
+    h1 {
+      color: #c71585;
+    }
+    a {
+      display: inline-block;
+      margin: 15px;
+      padding: 15px 25px;
+      background-color: #c71585;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+    }
+    a:hover {
+      background-color: #a0136d;
+    }
+  </style>
 </head>
 <body>
-<h1>Bienvenue sur Amou-myste</h1>
-<p>Bienvenue sur notre site officiel.</p>
-
-<a href="inscription.html" style="display:inline-block; padding:10px 20px; background-color:#007BFF; color:#fff; text-decoration:none; border-radius:5px;">
-  Inscription Amou-myste
-</a>
-
-<p>
-  <a href="inscription.html">Cliquez ici pour vous inscrire à Amou-myste</a>
-</p>
+  <h1>Bienvenue sur Amou Myste 💖</h1>
+  <p>Choisissez comment vous souhaitez vous inscrire :</p>
+  <a href="inscription-googleform.html">Enregistrement via Google Form</a>
+  <a href="inscription-classique.html">Enregistrement classique</a>
 </body>
 </html>
